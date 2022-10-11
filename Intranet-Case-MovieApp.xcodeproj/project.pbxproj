@@ -13,11 +13,6 @@
 		572DC11728F5E77900930AE1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 572DC11528F5E77900930AE1 /* LaunchScreen.storyboard */; };
 		572DC12828F5E82100930AE1 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 572DC12728F5E82100930AE1 /* HomeViewController.swift */; };
 		572DC12A28F5E82800930AE1 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 572DC12928F5E82800930AE1 /* Home.storyboard */; };
-		572DC12D28F5E95600930AE1 /* NetworkContracts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 572DC12C28F5E95600930AE1 /* NetworkContracts.swift */; };
-		572DC12F28F5E96E00930AE1 /* HttpMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 572DC12E28F5E96E00930AE1 /* HttpMethod.swift */; };
-		572DC13128F5E97B00930AE1 /* HttpHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 572DC13028F5E97B00930AE1 /* HttpHeader.swift */; };
-		572DC13328F5E98700930AE1 /* NetworkExecuter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 572DC13228F5E98700930AE1 /* NetworkExecuter.swift */; };
-		572DC13528F5E9A200930AE1 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 572DC13428F5E9A200930AE1 /* NetworkError.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,11 +24,6 @@
 		572DC11828F5E77900930AE1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		572DC12728F5E82100930AE1 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		572DC12928F5E82800930AE1 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
-		572DC12C28F5E95600930AE1 /* NetworkContracts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkContracts.swift; sourceTree = "<group>"; };
-		572DC12E28F5E96E00930AE1 /* HttpMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpMethod.swift; sourceTree = "<group>"; };
-		572DC13028F5E97B00930AE1 /* HttpHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpHeader.swift; sourceTree = "<group>"; };
-		572DC13228F5E98700930AE1 /* NetworkExecuter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkExecuter.swift; sourceTree = "<group>"; };
-		572DC13428F5E9A200930AE1 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,7 +96,6 @@
 		572DC12128F5E7C800930AE1 /* DataProvider */ = {
 			isa = PBXGroup;
 			children = (
-				572DC12B28F5E93A00930AE1 /* Core */,
 			);
 			path = DataProvider;
 			sourceTree = "<group>";
@@ -148,18 +137,6 @@
 				572DC11528F5E77900930AE1 /* LaunchScreen.storyboard */,
 			);
 			path = Launch;
-			sourceTree = "<group>";
-		};
-		572DC12B28F5E93A00930AE1 /* Core */ = {
-			isa = PBXGroup;
-			children = (
-				572DC12C28F5E95600930AE1 /* NetworkContracts.swift */,
-				572DC12E28F5E96E00930AE1 /* HttpMethod.swift */,
-				572DC13028F5E97B00930AE1 /* HttpHeader.swift */,
-				572DC13228F5E98700930AE1 /* NetworkExecuter.swift */,
-				572DC13428F5E9A200930AE1 /* NetworkError.swift */,
-			);
-			path = Core;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -233,14 +210,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				572DC12D28F5E95600930AE1 /* NetworkContracts.swift in Sources */,
-				572DC13528F5E9A200930AE1 /* NetworkError.swift in Sources */,
 				572DC10B28F5E77800930AE1 /* AppDelegate.swift in Sources */,
-				572DC13128F5E97B00930AE1 /* HttpHeader.swift in Sources */,
-				572DC12F28F5E96E00930AE1 /* HttpMethod.swift in Sources */,
 				572DC10D28F5E77800930AE1 /* SceneDelegate.swift in Sources */,
 				572DC12828F5E82100930AE1 /* HomeViewController.swift in Sources */,
-				572DC13328F5E98700930AE1 /* NetworkExecuter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
