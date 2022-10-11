@@ -18,6 +18,7 @@
 		572DC13F28F5EB9500930AE1 /* HttpHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 572DC13A28F5EB9500930AE1 /* HttpHeader.swift */; };
 		572DC14028F5EB9500930AE1 /* NetworkExecuter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 572DC13B28F5EB9500930AE1 /* NetworkExecuter.swift */; };
 		572DC14128F5EB9500930AE1 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 572DC13C28F5EB9500930AE1 /* NetworkError.swift */; };
+		572DC14428F5ECEB00930AE1 /* TheOmdbAPIClients.swift in Sources */ = {isa = PBXBuildFile; fileRef = 572DC14328F5ECEB00930AE1 /* TheOmdbAPIClients.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		572DC13A28F5EB9500930AE1 /* HttpHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HttpHeader.swift; sourceTree = "<group>"; };
 		572DC13B28F5EB9500930AE1 /* NetworkExecuter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkExecuter.swift; sourceTree = "<group>"; };
 		572DC13C28F5EB9500930AE1 /* NetworkError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
+		572DC14328F5ECEB00930AE1 /* TheOmdbAPIClients.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheOmdbAPIClients.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -166,6 +168,7 @@
 		572DC14228F5EBB900930AE1 /* Clients */ = {
 			isa = PBXGroup;
 			children = (
+				572DC14328F5ECEB00930AE1 /* TheOmdbAPIClients.swift */,
 			);
 			path = Clients;
 			sourceTree = "<group>";
@@ -245,6 +248,7 @@
 				572DC14128F5EB9500930AE1 /* NetworkError.swift in Sources */,
 				572DC10B28F5E77800930AE1 /* AppDelegate.swift in Sources */,
 				572DC13F28F5EB9500930AE1 /* HttpHeader.swift in Sources */,
+				572DC14428F5ECEB00930AE1 /* TheOmdbAPIClients.swift in Sources */,
 				572DC13E28F5EB9500930AE1 /* HttpMethod.swift in Sources */,
 				572DC10D28F5E77800930AE1 /* SceneDelegate.swift in Sources */,
 				572DC12828F5E82100930AE1 /* HomeViewController.swift in Sources */,
