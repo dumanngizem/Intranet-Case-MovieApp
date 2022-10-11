@@ -145,6 +145,7 @@
 		572DC13628F5EB9500930AE1 /* DataProvider */ = {
 			isa = PBXGroup;
 			children = (
+				572DC14228F5EBB900930AE1 /* Clients */,
 				572DC13728F5EB9500930AE1 /* Core */,
 			);
 			path = DataProvider;
@@ -160,6 +161,13 @@
 				572DC13C28F5EB9500930AE1 /* NetworkError.swift */,
 			);
 			path = Core;
+			sourceTree = "<group>";
+		};
+		572DC14228F5EBB900930AE1 /* Clients */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Clients;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
