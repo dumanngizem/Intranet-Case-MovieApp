@@ -12,6 +12,11 @@ protocol MovieDetailViewModelContracts {
     var routes: MovieDetailViewModelRoutes? { get set }
     var output: MovieDetailViewModelOutput? { get set }
     var repository: MoviesRepositoryConracts? { get set }
+    
+    func viewDidLoad()
+    func cellForItemAt() -> [String]?
+    func imdbRating() -> Int?
+    func cellForRowAt() -> MovieMetaData?
 }
 
 // MARK: - Routes
@@ -21,5 +26,7 @@ protocol MovieDetailViewModelRoutes: AnyObject {
 
 // MARK: - Outputs
 protocol MovieDetailViewModelOutput: AnyObject {
-    
+    func showError(message: String)
+    func notifyResponse(data: MovieMetaData?)
+    func reloadData()
 }
