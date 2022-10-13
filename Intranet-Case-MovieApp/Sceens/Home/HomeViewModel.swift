@@ -14,6 +14,9 @@ final class HomeViewModel: HomeViewModelContracts {
     var repository: MoviesRepositoryConracts
     
     var searchMovieData: [Search]?
+    var isShowLastSearch: Bool = true
+    private var lastTexts: [String] = []
+    
     
     init(repository: MoviesRepositoryConracts) {
         self.repository = repository
@@ -21,12 +24,20 @@ final class HomeViewModel: HomeViewModelContracts {
     
     func viewDidLoad() {
         fetchMovies(search: "Batman")
+        fetchLastSearch()
+        
     }
     
     func searchBarTextDidEndEditing(search: String?) {
         guard let text = search else { return }
         if !text.isEmpty {
             fetchMovies(search: text)
+            lastTexts.append(text)
+            let model = SearchLocal(context: CoreDataHelper.shared.context)
+            model.texts = text
+            model.timeStamp = Date.now
+            CoreDataHelper.shared.addObject(entity: model)
+            fetchLastSearch()
         }
     }
     
@@ -34,14 +45,23 @@ final class HomeViewModel: HomeViewModelContracts {
         let id = searchMovieData?[indexPath.row].imdbID
         routes?.presentMovieDetail(imdbID: id)
     }
+    
+    func closeButtonTapped(string: String?) {
+        guard let text = string else { return }
+        CoreDataHelper.shared.removeLastSearch(title: text)
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+            self.fetchLastSearch()
+        }
+    }
 }
 
 // MARK: - DataSources
 extension HomeViewModel {
- 
+    
     var numberOfRowsInSection: Int {
         return searchMovieData?.count ?? 0
     }
+    
 }
 
 // MARK: - ConfigureContents
@@ -73,5 +93,12 @@ extension HomeViewModel {
                 self.output?.showError(message: error.localizedDescription)
             }
         }
+    }
+    
+    private func fetchLastSearch() {
+        guard let item = CoreDataHelper.shared.getDatas(entity: SearchLocal.self) else { return }
+        let filterData = item.prefix(5)
+        let lastStringArray = Array(filterData)
+        output?.showLastSearch(data: lastStringArray)
     }
 }
