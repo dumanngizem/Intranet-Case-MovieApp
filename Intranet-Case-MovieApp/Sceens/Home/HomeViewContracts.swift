@@ -13,12 +13,14 @@ protocol HomeViewModelContracts {
     var output: HomeViewModelOutput? { get set }
     var repository: MoviesRepositoryConracts { get set }
     var searchMovieData: [Search]? { get set }
+    var isShowLastSearch: Bool { get set }
     
     var numberOfRowsInSection: Int { get }
     
     func viewDidLoad()
     func searchBarTextDidEndEditing(search: String?)
     func didSelectRowAt(indexPath: IndexPath)
+    func closeButtonTapped(string: String?)
 }
 
 // MARK: - Routes
@@ -28,6 +30,7 @@ protocol HomeViewModelRoute: AnyObject {
 
 //MARK: - Outputs
 protocol HomeViewModelOutput: AnyObject {
+    func showLastSearch(data: [SearchLocal])
     func showError(message: String)
     func showLoadingIndicator(isShow: Bool)
     func showEmptyData(isShow: Bool)
