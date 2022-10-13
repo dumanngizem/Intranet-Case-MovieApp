@@ -7,6 +7,10 @@
 
 import UIKit
 
+protocol LastSearchViewDelegate: AnyObject {
+    func cellItemTapped(title: String?)
+}
+
 class LastSearchView: UIView {
 
     private let tableView: UITableView = {
@@ -34,6 +38,7 @@ class LastSearchView: UIView {
     }
     
     public weak var delegate: TextAndCloseCellDelegate?
+    public weak var cellDelegate: LastSearchViewDelegate?
 }
 
 // MARK: - UILayout
@@ -72,6 +77,10 @@ extension LastSearchView {
 // MARK: - UITableViewDelegate
 extension LastSearchView: UITableViewDelegate {
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let item = data?[indexPath.row]
+        cellDelegate?.cellItemTapped(title: item?.texts)
+    }
 }
 
 // MARK: - UITableViewDataSource

@@ -53,6 +53,11 @@ final class HomeViewModel: HomeViewModelContracts {
             self.fetchLastSearch()
         }
     }
+    
+    func cellItemTapped(title: String?) {
+        guard let title = title else { return }
+        fetchMovies(search: title)
+    }
 }
 
 // MARK: - DataSources
@@ -67,10 +72,7 @@ extension HomeViewModel {
 // MARK: - ConfigureContents
 extension HomeViewModel {
     
-    private func configureMovieCell(searchData: [Search]?) {
-        guard let searchData = searchData else {
-            return
-        }
+    private func configureMovieCell(searchData: [Search]) {
         self.searchMovieData = searchData
     }
 }
@@ -86,9 +88,9 @@ extension HomeViewModel {
             self.output?.showLoadingIndicator(isShow: false)
             switch result {
             case .success(let response):
-                self.configureMovieCell(searchData: response.search)
+                self.configureMovieCell(searchData: response.search ?? [])
+                self.output?.showEmptyData(isShow: response.response == "False")
                 self.output?.reloadData()
-                self.output?.showEmptyData(isShow: response.search?.isEmpty ?? true)
             case .failure(let error):
                 self.output?.showError(message: error.localizedDescription)
             }
