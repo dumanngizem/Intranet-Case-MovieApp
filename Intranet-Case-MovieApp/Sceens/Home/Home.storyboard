@@ -15,18 +15,82 @@
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cvX-wv-T26">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="313.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello, what do you want to watch ?" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XrB-cp-ffc">
+                                        <rect key="frame" x="16" y="64" width="382" height="19.5"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <searchBar contentMode="redraw" searchBarStyle="minimal" placeholder="Search ..." translatesAutoresizingMaskIntoConstraints="NO" id="1qv-4Q-hHl">
+                                        <rect key="frame" x="16" y="99.5" width="382" height="56"/>
+                                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="56" id="9UY-Mj-wgU"/>
+                                        </constraints>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </searchBar>
+                                    <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1CY-t1-p2g">
+                                        <rect key="frame" x="26" y="145.5" width="362" height="120"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="120" id="Dzr-Vp-16o"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBlueColor"/>
+                                <constraints>
+                                    <constraint firstItem="1CY-t1-p2g" firstAttribute="top" secondItem="1qv-4Q-hHl" secondAttribute="bottom" constant="-10" id="4BV-8Y-Ws3"/>
+                                    <constraint firstAttribute="trailing" secondItem="XrB-cp-ffc" secondAttribute="trailing" constant="16" id="5BZ-LM-e1N"/>
+                                    <constraint firstItem="1qv-4Q-hHl" firstAttribute="top" secondItem="XrB-cp-ffc" secondAttribute="bottom" constant="16" id="6Lr-qG-JdB"/>
+                                    <constraint firstItem="XrB-cp-ffc" firstAttribute="top" secondItem="cvX-wv-T26" secondAttribute="top" constant="64" id="F63-qo-amk"/>
+                                    <constraint firstItem="1CY-t1-p2g" firstAttribute="trailing" secondItem="1qv-4Q-hHl" secondAttribute="trailing" constant="-10" id="Fat-lF-Al0"/>
+                                    <constraint firstItem="XrB-cp-ffc" firstAttribute="leading" secondItem="cvX-wv-T26" secondAttribute="leading" constant="16" id="HHD-PH-JAx"/>
+                                    <constraint firstAttribute="trailing" secondItem="1qv-4Q-hHl" secondAttribute="trailing" constant="16" id="IbC-xe-0b4"/>
+                                    <constraint firstItem="1qv-4Q-hHl" firstAttribute="leading" secondItem="cvX-wv-T26" secondAttribute="leading" constant="16" id="q25-FA-wnv"/>
+                                    <constraint firstItem="1CY-t1-p2g" firstAttribute="leading" secondItem="1qv-4Q-hHl" secondAttribute="leading" constant="10" id="sji-p3-Rqd"/>
+                                </constraints>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="O0f-xC-glr">
+                                <rect key="frame" x="0.0" y="313.5" width="414" height="548.5"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="O0f-xC-glr" secondAttribute="trailing" id="5ly-OO-lsd"/>
+                            <constraint firstItem="cvX-wv-T26" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="9eg-TY-rpG"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="O0f-xC-glr" secondAttribute="bottom" id="EBd-dJ-3bH"/>
+                            <constraint firstItem="cvX-wv-T26" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="Irg-2F-xOc"/>
+                            <constraint firstItem="O0f-xC-glr" firstAttribute="top" secondItem="cvX-wv-T26" secondAttribute="bottom" id="dwX-He-gh4"/>
+                            <constraint firstItem="cvX-wv-T26" firstAttribute="height" secondItem="5EZ-qb-Rvc" secondAttribute="height" multiplier="0.35" id="e6A-fr-QWW"/>
+                            <constraint firstItem="cvX-wv-T26" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="kde-8G-fw8"/>
+                            <constraint firstItem="O0f-xC-glr" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="vne-fn-107"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="BpY-C0-7FE"/>
+                    <connections>
+                        <outlet property="headerContainerView" destination="cvX-wv-T26" id="W3B-9B-qPD"/>
+                        <outlet property="lastSearchView" destination="1CY-t1-p2g" id="xDc-Yj-tr2"/>
+                        <outlet property="searchBar" destination="1qv-4Q-hHl" id="a1H-qg-UfS"/>
+                        <outlet property="tableView" destination="O0f-xC-glr" id="zGF-OI-tVo"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="30" y="84"/>
+            <point key="canvasLocation" x="939.13043478260875" y="83.705357142857139"/>
         </scene>
     </scenes>
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
