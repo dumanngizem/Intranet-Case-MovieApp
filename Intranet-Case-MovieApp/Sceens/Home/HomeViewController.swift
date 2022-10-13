@@ -93,8 +93,8 @@ extension HomeViewController {
     
     private func configureLastSearch() {
         lastSearch.delegate = self
+        lastSearch.cellDelegate = self
     }
-
 }
 
 // MARK: - UITableViewDelegate
@@ -195,5 +195,14 @@ extension HomeViewController: HomeViewModelRoute {
 extension HomeViewController: TextAndCloseCellDelegate {
     func closeButtonTapped(string: String?) {
         viewModel.closeButtonTapped(string: string)
+    }
+}
+
+// MARK: - LastSearchViewDelegate
+extension HomeViewController: LastSearchViewDelegate {
+  
+    func cellItemTapped(title: String?) {
+        viewModel.cellItemTapped(title: title)
+        self.searchBar.text = title
     }
 }

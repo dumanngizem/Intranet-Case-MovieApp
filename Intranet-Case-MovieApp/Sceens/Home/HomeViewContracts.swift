@@ -21,6 +21,7 @@ protocol HomeViewModelContracts {
     func searchBarTextDidEndEditing(search: String?)
     func didSelectRowAt(indexPath: IndexPath)
     func closeButtonTapped(string: String?)
+    func cellItemTapped(title: String?)
 }
 
 // MARK: - Routes
